@@ -1,12 +1,12 @@
 ```html
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>La mia galleria</title>
+    <title>My Gallery</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,7 +121,7 @@
 
 
         /* =========================
-           MENU NEGOZIO
+           SHOP MENU
         ========================= */
 
         .negozio-menu {
@@ -169,7 +169,7 @@
 
 
         /* =========================
-           GALLERIA
+           GALLERY
         ========================= */
 
         .galleria {
@@ -213,7 +213,7 @@
 
 
         /* =========================
-           IMMAGINE
+           IMAGE
         ========================= */
 
         .immagine {
@@ -247,7 +247,7 @@
 
 
         /* =========================
-           INFO CHE COMPAIONO AL PASSAGGIO
+           HOVER DETAILS
         ========================= */
 
         .dettagli-hover {
@@ -306,7 +306,7 @@
 
 
         /* =========================
-           INFO SOTTO IL QUADRO
+           INFO BELOW ARTWORK
         ========================= */
 
         .info {
@@ -348,7 +348,7 @@
 
 
         /* =========================
-           AZIONI
+           ACTIONS
         ========================= */
 
         .azioni {
@@ -403,7 +403,7 @@
 
 
         /* =========================
-           PANNELLO LATERALE
+           SIDE PANEL
         ========================= */
 
         .pannello {
@@ -611,7 +611,7 @@
 
 
         /* =========================
-           MODAL OPERA
+           ARTWORK MODAL
         ========================= */
 
         .modal {
@@ -820,7 +820,7 @@
             class="menu-button"
             onclick="apriPannello('preferiti')"
         >
-            ♡ Preferiti
+            ♡ Favorites
             <span id="numeroPreferiti">0</span>
         </button>
 
@@ -829,7 +829,7 @@
             class="menu-button"
             onclick="apriPannello('carrello')"
         >
-            🛒 Carrello
+            🛒 Cart
             <span id="numeroCarrello">0</span>
         </button>
 
@@ -845,12 +845,12 @@
 
         <div class="piccola-linea"></div>
 
-        <h1>La mia galleria</h1>
+        <h1>My Gallery</h1>
 
-        <p>Una collezione di quadri</p>
+        <p>A collection of artworks</p>
 
         <div class="scroll">
-            ↓ &nbsp; Scopri le opere
+            ↓ &nbsp; Discover the artworks
         </div>
 
     </header>
@@ -858,7 +858,7 @@
 
 
     <!-- =========================
-         GALLERIA
+         GALLERY
     ========================= -->
 
     <main class="galleria">
@@ -866,16 +866,16 @@
 
 
         <!-- =====================
-             QUADRO 1
+             ARTWORK 1
         ====================== -->
 
         <article
             class="quadro"
             data-id="quadro1"
-            data-titolo="Quadro 1"
+            data-titolo="Artwork 1"
             data-prezzo="850"
             data-dimensioni="50 × 70 cm"
-            data-tecnica="Olio su tela"
+            data-tecnica="Oil on canvas"
             onclick="apriOpera(this)"
         >
 
@@ -883,7 +883,7 @@
 
                 <img
                     src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200"
-                    alt="Quadro 1"
+                    alt="Artwork 1"
                 >
 
 
@@ -897,7 +897,7 @@
 
                         50 × 70 cm<br>
 
-                        Olio su tela
+                        Oil on canvas
 
                     </div>
 
@@ -908,9 +908,9 @@
 
             <div class="info">
 
-                <h2>Quadro 1</h2>
+                <h2>Artwork 1</h2>
 
-                <p>Descrizione del quadro</p>
+                <p>Artwork description</p>
 
                 <div class="prezzo-mobile">
                     € 850
@@ -923,7 +923,7 @@
                         class="preferito"
                         onclick="togglePreferito(event, this)"
                     >
-                        ♡ Preferiti
+                        ♡ Favorites
                     </button>
 
 
@@ -931,7 +931,7 @@
                         class="carrello"
                         onclick="aggiungiCarrello(event, this)"
                     >
-                        🛒 Carrello
+                        🛒 Cart
                     </button>
 
                 </div>
@@ -943,16 +943,16 @@
 
 
         <!-- =====================
-             QUADRO 2
+             ARTWORK 2
         ====================== -->
 
         <article
             class="quadro"
             data-id="quadro2"
-            data-titolo="Quadro 2"
+            data-titolo="Artwork 2"
             data-prezzo="1200"
             data-dimensioni="60 × 80 cm"
-            data-tecnica="Acrilico su tela"
+            data-tecnica="Acrylic on canvas"
             onclick="apriOpera(this)"
         >
 
@@ -960,21 +960,21 @@
 
                 <img
                     src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=1200"
-                    alt="Quadro 2"
+                    alt="Artwork 2"
                 >
 
 
                 <div class="dettagli-hover">
 
                     <div class="prezzo">
-                        € 1.200
+                        € 1,200
                     </div>
 
                     <div class="specifiche">
 
                         60 × 80 cm<br>
 
-                        Acrilico su tela
+                        Acrylic on canvas
 
                     </div>
 
@@ -985,12 +985,12 @@
 
             <div class="info">
 
-                <h2>Quadro 2</h2>
+                <h2>Artwork 2</h2>
 
-                <p>Descrizione del quadro</p>
+                <p>Artwork description</p>
 
                 <div class="prezzo-mobile">
-                    € 1.200
+                    € 1,200
                 </div>
 
 
@@ -1000,7 +1000,7 @@
                         class="preferito"
                         onclick="togglePreferito(event, this)"
                     >
-                        ♡ Preferiti
+                        ♡ Favorites
                     </button>
 
 
@@ -1008,7 +1008,7 @@
                         class="carrello"
                         onclick="aggiungiCarrello(event, this)"
                     >
-                        🛒 Carrello
+                        🛒 Cart
                     </button>
 
                 </div>
@@ -1020,16 +1020,16 @@
 
 
         <!-- =====================
-             QUADRO 3
+             ARTWORK 3
         ====================== -->
 
         <article
             class="quadro"
             data-id="quadro3"
-            data-titolo="Quadro 3"
+            data-titolo="Artwork 3"
             data-prezzo="950"
             data-dimensioni="40 × 60 cm"
-            data-tecnica="Tecnica mista"
+            data-tecnica="Mixed media"
             onclick="apriOpera(this)"
         >
 
@@ -1037,7 +1037,7 @@
 
                 <img
                     src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=1200"
-                    alt="Quadro 3"
+                    alt="Artwork 3"
                 >
 
 
@@ -1051,7 +1051,7 @@
 
                         40 × 60 cm<br>
 
-                        Tecnica mista
+                        Mixed media
 
                     </div>
 
@@ -1062,9 +1062,9 @@
 
             <div class="info">
 
-                <h2>Quadro 3</h2>
+                <h2>Artwork 3</h2>
 
-                <p>Descrizione del quadro</p>
+                <p>Artwork description</p>
 
                 <div class="prezzo-mobile">
                     € 950
@@ -1077,7 +1077,7 @@
                         class="preferito"
                         onclick="togglePreferito(event, this)"
                     >
-                        ♡ Preferiti
+                        ♡ Favorites
                     </button>
 
 
@@ -1085,7 +1085,7 @@
                         class="carrello"
                         onclick="aggiungiCarrello(event, this)"
                     >
-                        🛒 Carrello
+                        🛒 Cart
                     </button>
 
                 </div>
@@ -1097,16 +1097,16 @@
 
 
         <!-- =====================
-             QUADRO 4
+             ARTWORK 4
         ====================== -->
 
         <article
             class="quadro"
             data-id="quadro4"
-            data-titolo="Quadro 4"
+            data-titolo="Artwork 4"
             data-prezzo="1500"
             data-dimensioni="70 × 100 cm"
-            data-tecnica="Olio su tela"
+            data-tecnica="Oil on canvas"
             onclick="apriOpera(this)"
         >
 
@@ -1114,21 +1114,21 @@
 
                 <img
                     src="immagini/quadro4.jpg"
-                    alt="Quadro 4"
+                    alt="Artwork 4"
                 >
 
 
                 <div class="dettagli-hover">
 
                     <div class="prezzo">
-                        € 1.500
+                        € 1,500
                     </div>
 
                     <div class="specifiche">
 
                         70 × 100 cm<br>
 
-                        Olio su tela
+                        Oil on canvas
 
                     </div>
 
@@ -1139,12 +1139,12 @@
 
             <div class="info">
 
-                <h2>Quadro 4</h2>
+                <h2>Artwork 4</h2>
 
-                <p>Descrizione del quadro</p>
+                <p>Artwork description</p>
 
                 <div class="prezzo-mobile">
-                    € 1.500
+                    € 1,500
                 </div>
 
 
@@ -1154,7 +1154,7 @@
                         class="preferito"
                         onclick="togglePreferito(event, this)"
                     >
-                        ♡ Preferiti
+                        ♡ Favorites
                     </button>
 
 
@@ -1162,7 +1162,7 @@
                         class="carrello"
                         onclick="aggiungiCarrello(event, this)"
                     >
-                        🛒 Carrello
+                        🛒 Cart
                     </button>
 
                 </div>
@@ -1175,12 +1175,12 @@
 
         <!--
         ==================================================
-        COME AGGIUNGERE ALTRI QUADRI
+        HOW TO ADD MORE ARTWORKS
         ==================================================
 
-        Copia il blocco del Quadro 4.
+        Copy the Artwork 4 block.
 
-        Poi cambia:
+        Then change:
 
         data-id
         data-titolo
@@ -1190,8 +1190,8 @@
         src
         alt
         h2
-        descrizione
-        prezzo
+        description
+        price
 
         ==================================================
         -->
@@ -1208,14 +1208,14 @@
 
     <footer>
 
-        La mia galleria · Tutte le opere
+        My Gallery · All artworks
 
     </footer>
 
 
 
     <!-- =========================
-         PANNELLO
+         SIDE PANEL
     ========================= -->
 
     <aside
@@ -1226,7 +1226,7 @@
         <div class="pannello-header">
 
             <h2 id="titoloPannello">
-                Preferiti
+                Favorites
             </h2>
 
             <button
@@ -1246,7 +1246,7 @@
 
 
     <!-- =========================
-         MODAL IMMAGINE
+         IMAGE MODAL
     ========================= -->
 
     <div
@@ -1266,7 +1266,7 @@
         <img
             id="immagineGrande"
             src=""
-            alt="Opera ingrandita"
+            alt="Enlarged artwork"
         >
 
     </div>
@@ -1281,7 +1281,7 @@
 
 
         /* =========================
-           DATI
+           DATA
         ========================= */
 
         let preferiti =
@@ -1298,7 +1298,7 @@
 
 
         /* =========================
-           AGGIORNA CONTATORI
+           UPDATE COUNTERS
         ========================= */
 
         function aggiornaContatori() {
@@ -1317,7 +1317,7 @@
 
 
         /* =========================
-           DATI QUADRO
+           ARTWORK DATA
         ========================= */
 
         function datiQuadro(quadro) {
@@ -1347,7 +1347,7 @@
 
 
         /* =========================
-           PREFERITI
+           FAVORITES
         ========================= */
 
         function togglePreferito(event, bottone) {
@@ -1397,7 +1397,7 @@
 
 
         /* =========================
-           CARRELLO
+           CART
         ========================= */
 
         function aggiungiCarrello(event, bottone) {
@@ -1434,7 +1434,7 @@
 
 
                 bottone.textContent =
-                    "✓ Nel carrello";
+                    "✓ In cart";
 
 
             } else {
@@ -1448,7 +1448,7 @@
 
 
         /* =========================
-           APRI PANNELLO
+           OPEN PANEL
         ========================= */
 
         function apriPannello(tipo) {
@@ -1476,13 +1476,13 @@
             if (tipo === "preferiti") {
 
                 titolo.textContent =
-                    "Preferiti";
+                    "Favorites";
 
 
                 if (preferiti.length === 0) {
 
                     contenuto.innerHTML =
-                        '<p class="vuoto">Non hai ancora aggiunto opere ai preferiti.</p>';
+                        '<p class="vuoto">You have not added any artworks to your favorites yet.</p>';
 
                     return;
 
@@ -1505,13 +1505,13 @@
             if (tipo === "carrello") {
 
                 titolo.textContent =
-                    "Il tuo carrello";
+                    "Your Cart";
 
 
                 if (carrello.length === 0) {
 
                     contenuto.innerHTML =
-                        '<p class="vuoto">Il carrello è vuoto.</p>';
+                        '<p class="vuoto">Your cart is empty.</p>';
 
                     return;
 
@@ -1541,10 +1541,10 @@
 
                     <div class="totale">
 
-                        <span>Totale</span>
+                        <span>Total</span>
 
                         <strong>
-                            € ${totale.toLocaleString("it-IT")}
+                            € ${totale.toLocaleString("en-US")}
                         </strong>
 
                     </div>
@@ -1554,7 +1554,7 @@
                         class="acquista"
                         onclick="acquista()"
                     >
-                        Procedi all'acquisto
+                        Proceed to checkout
                     </button>
 
                 `;
@@ -1566,7 +1566,7 @@
 
 
         /* =========================
-           ELEMENTO PANNELLO
+           PANEL ITEM
         ========================= */
 
         function creaElementoPannello(
@@ -1599,7 +1599,7 @@
                         </p>
 
                         <p>
-                            € ${opera.prezzo.toLocaleString("it-IT")}
+                            € ${opera.prezzo.toLocaleString("en-US")}
                         </p>
 
 
@@ -1607,7 +1607,7 @@
                             class="rimuovi"
                             onclick="rimuovi('${opera.id}', '${tipo}')"
                         >
-                            Rimuovi
+                            Remove
                         </button>
 
                     </div>
@@ -1621,7 +1621,7 @@
 
 
         /* =========================
-           RIMUOVI
+           REMOVE
         ========================= */
 
         function rimuovi(id, tipo) {
@@ -1672,7 +1672,7 @@
 
 
         /* =========================
-           CHIUDI PANNELLO
+           CLOSE PANEL
         ========================= */
 
         function chiudiPannello() {
@@ -1686,7 +1686,7 @@
 
 
         /* =========================
-           APRI OPERA
+           OPEN ARTWORK
         ========================= */
 
         function apriOpera(quadro) {
@@ -1713,7 +1713,7 @@
 
 
         /* =========================
-           CHIUDI OPERA
+           CLOSE ARTWORK
         ========================= */
 
         function chiudiOpera(event) {
@@ -1738,13 +1738,13 @@
 
 
         /* =========================
-           ACQUISTO
+           CHECKOUT
         ========================= */
 
         function acquista() {
 
             alert(
-                "Il carrello è pronto. Il prossimo passo è collegare un sistema di pagamento."
+                "Your cart is ready. The next step is to connect a payment system."
             );
 
         }
@@ -1773,7 +1773,7 @@
 
 
         /* =========================
-           AVVIO
+           START
         ========================= */
 
         aggiornaContatori();
