@@ -1,106 +1,83 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>La mia galleria</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f1ea;
-            color: #222;
+        * {
+            box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #f3efe8;
+            color: #191817;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* HEADER */
+
         header {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 50px 20px;
-            background-color: #222;
-            color: white;
+
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.7), transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(0,0,0,.08), transparent 35%),
+                #22211f;
+
+            color: #f8f5ef;
+        }
+
+        .piccola-linea {
+            width: 45px;
+            height: 1px;
+            background: #c9bda9;
+            margin-bottom: 30px;
         }
 
         header h1 {
-            font-size: 42px;
-            margin: 0 0 10px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(60px, 10vw, 120px);
+            font-weight: 500;
+            line-height: .9;
+            letter-spacing: -3px;
+            margin: 0;
         }
 
         header p {
-            font-size: 18px;
+            margin: 30px 0 0;
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #cfc7ba;
         }
 
-        .galleria {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+        .scroll {
+            position: absolute;
+            bottom: 30px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #aaa39a;
         }
+```
 
-        .quadro {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        .quadro img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .info {
-            padding: 18px;
-        }
-
-        .info h2 {
-            margin: 0 0 8px;
-        }
-
-        .info p {
-            margin: 0;
-            color: #666;
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <h1>La mia galleria</h1>
-        <p>Una collezione di quadri</p>
-    </header>
-
-    <main class="galleria">
-
-        <div class="quadro">
-            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800" alt="Quadro">
-            <div class="info">
-                <h2>Quadro 1</h2>
-                <p>Descrizione del quadro</p>
-            </div>
-        </div>
-
-        <div class="quadro">
-            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=800" alt="Quadro">
-            <div class="info">
-                <h2>Quadro 2</h2>
-                <p>Descrizione del quadro</p>
-            </div>
-        </div>
-
-        <div class="quadro">
-            <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=800" alt="Quadro">
-            <div class="info">
-                <h2>Quadro 3</h2>
-                <p>Descrizione del quadro</p>
-            </div>
-        </div>
-
-    </main>
-
-</body>
-</html>
