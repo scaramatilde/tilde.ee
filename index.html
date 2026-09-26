@@ -79,5 +79,349 @@
             text-transform: uppercase;
             color: #aaa39a;
         }
-```
 
+        /* GALLERIA */
+
+        .galleria {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 110px 30px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 90px 45px;
+        }
+
+        .quadro {
+            background: transparent;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: comparsa .8s ease forwards;
+        }
+
+        .quadro:nth-child(2) {
+            animation-delay: .15s;
+            margin-top: 120px;
+        }
+
+        .quadro:nth-child(3) {
+            animation-delay: .3s;
+            grid-column: 1 / -1;
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @keyframes comparsa {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .immagine {
+            overflow: hidden;
+            background: #ddd7ce;
+            position: relative;
+        }
+
+        .immagine::after {
+            content: "Vedi opera";
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: rgba(20,20,20,.35);
+            color: white;
+
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            opacity: 0;
+            transition: opacity .4s ease;
+        }
+
+        .quadro:hover .immagine::after {
+            opacity: 1;
+        }
+
+        .quadro img {
+            display: block;
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+
+            transition: transform .7s cubic-bezier(.2,.7,.2,1);
+        }
+
+        .quadro:nth-child(3) img {
+            height: 600px;
+        }
+
+        .quadro:hover img {
+            transform: scale(1.045);
+        }
+
+        /* TESTI */
+
+        .info {
+            padding: 22px 5px 0;
+        }
+
+        .info h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 32px;
+            font-weight: 500;
+            margin: 0 0 7px;
+        }
+
+        .info p {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 300;
+            color: #77716a;
+            letter-spacing: .3px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #d7d0c6;
+            text-align: center;
+            padding: 40px 20px;
+            color: #888178;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* FINESTRA OPERA */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            background: rgba(15,15,14,.94);
+        }
+
+        .modal.aperta {
+            display: flex;
+        }
+
+        .modal img {
+            max-width: 92vw;
+            max-height: 88vh;
+            object-fit: contain;
+
+            animation: zoom .4s ease;
+        }
+
+        @keyframes zoom {
+            from {
+                opacity: 0;
+                transform: scale(.94);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .chiudi {
+            position: fixed;
+            top: 25px;
+            right: 30px;
+
+            border: 0;
+            background: transparent;
+
+            color: white;
+            font-size: 35px;
+            font-weight: 200;
+
+            cursor: pointer;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                min-height: 70vh;
+            }
+
+            header h1 {
+                letter-spacing: -2px;
+            }
+
+            header p {
+                font-size: 11px;
+                letter-spacing: 2.5px;
+            }
+
+            .galleria {
+                grid-template-columns: 1fr;
+                gap: 65px;
+                padding: 70px 20px;
+            }
+
+            .quadro:nth-child(2) {
+                margin-top: 0;
+            }
+
+            .quadro:nth-child(3) {
+                grid-column: auto;
+            }
+
+            .quadro img,
+            .quadro:nth-child(3) img {
+                height: 430px;
+            }
+
+            .info h2 {
+                font-size: 28px;
+            }
+
+            .scroll {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="piccola-linea"></div>
+
+        <h1>La mia galleria</h1>
+
+        <p>Una collezione di quadri</p>
+
+        <div class="scroll">
+            ↓ &nbsp; Scopri le opere
+        </div>
+
+    </header>
+
+
+    <main class="galleria">
+
+        <article class="quadro" onclick="apriOpera(this)">
+            <div class="immagine">
+                <img
+                    src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200"
+                    alt="Quadro 1"
+                >
+            </div>
+
+            <div class="info">
+                <h2>Quadro 1</h2>
+                <p>Descrizione del quadro</p>
+            </div>
+        </article>
+
+
+        <article class="quadro" onclick="apriOpera(this)">
+            <div class="immagine">
+                <img
+                    src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=1200"
+                    alt="Quadro 2"
+                >
+            </div>
+
+            <div class="info">
+                <h2>Quadro 2</h2>
+                <p>Descrizione del quadro</p>
+            </div>
+        </article>
+
+
+        <article class="quadro" onclick="apriOpera(this)">
+            <div class="immagine">
+                <img
+                    src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=1200"
+                    alt="Quadro 3"
+                >
+            </div>
+
+            <div class="info">
+                <h2>Quadro 3</h2>
+                <p>Descrizione del quadro</p>
+            </div>
+        </article>
+
+    </main>
+
+
+    <footer>
+        La mia galleria · Tutte le opere
+    </footer>
+
+
+    <!-- FINESTRA QUADRO -->
+
+    <div class="modal" id="modal" onclick="chiudiOpera()">
+
+        <button class="chiudi" onclick="chiudiOpera(event)">
+            ×
+        </button>
+
+        <img id="immagineGrande" src="" alt="Opera ingrandita">
+
+    </div>
+
+
+    <script>
+
+        function apriOpera(quadro) {
+
+            const immagine = quadro.querySelector("img");
+
+            document.getElementById("immagineGrande").src = immagine.src;
+
+            document.getElementById("modal").classList.add("aperta");
+
+            document.body.style.overflow = "hidden";
+        }
+
+
+        function chiudiOpera(event) {
+
+            if (event) {
+                event.stopPropagation();
+            }
+
+            document.getElementById("modal").classList.remove("aperta");
+
+            document.body.style.overflow = "";
+        }
+
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                chiudiOpera();
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
